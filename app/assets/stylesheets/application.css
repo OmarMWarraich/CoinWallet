@@ -39,7 +39,10 @@
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
+.spash-main a {
+  text-decoration: none;
+}
+
 .sidenav a:hover {
   color: #818181;
 }
@@ -75,4 +78,39 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.spash-main {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  gap: 0.6rem;
+  height: 100%;
+  place-content: center;
+  place-items: center;
+}
+
+.spash-main .button {
+  background-color: #3778c2;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+}
+
+.spash-main .button:last-of-type {
+  background-color: #fff;
+  color: #434b54;
+}
+
+.spash-main .button:hover {
+  background-color: #5fb523;
+  color: #3778c2;
+  transform: scale(1.1);
+}
+
+.splash-header {
+  display: none;
 }

@@ -1,11 +1,17 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
-  before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :update_allowed_parameters, if: :devise_controller?
 
   protected
 
-  def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password confirm_password])
-    devise_parameter_sanitizer.permit(:sign_in, keys: %i[email password])
+  def update_allowed_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+  end
+
+  def authenticate_user!
+    if user_signed_in?
+      super
+    else
+      redirect_to spash_index_path, notice: 'You must be logged in to access this section'
+    end
   end
 end

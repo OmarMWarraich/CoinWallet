@@ -1,15 +1,21 @@
-<div id="mySidenav" class="sidenav">
-<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-<a href="#">Account Settings</a>
-<a href="#">Merchant Finder</a>
-<a href="#">Claim promo</a>
-<a href="#">Share promo</a>
-</div>
-
-<div class='header'>
-<div onclick="openNav()"><%= image_tag ("hamburger.png") %></div>
-</div>
-
-<div id="main">
-    
-</div> 
+<% if current_page? == 'root_path_url' %>
+  <div class='splash-header'>Splash</div>
+  <% end %>
+<% if current_page? == 'new_user_registration_url' || 'new_user_session_url' %>
+  <%= link_to "<-", root_path, class: "back" %>
+  <% else %>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Account Settings</a>
+    <a href="#">Merchant Finder</a>
+    <a href="#">Claim promo</a>
+    <a href="#">Share promo</a>
+  </div>
+  <div class='header'>
+    <div onclick="openNav()">
+      <%= image_tag ("hamburger.png") %>
+    </div>
+  </div>
+  <div id="main">
+  </div> 
+<% end %>
