@@ -70,3 +70,7 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
+
+gem 'devise'
+gem 'dotenv-rails'
+gem 'letter_opener'
