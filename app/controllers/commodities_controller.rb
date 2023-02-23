@@ -5,14 +5,13 @@ class CommoditiesController < ApplicationController
   # GET /commodities or /commodities.json
   def index
     @commodities = Commodity.all.where(user_id: current_user.id).order('created_at DESC')
-    commodity = Commodity.find_by(id: params[:id])
   end
 
   # GET /commodities/1 or /commodities/1.json
-  def show; 
+  def show
     @commodity = Commodity.find_by(id: params[:id])
     @commodities = Commodity.all
-end
+  end
 
   # GET /commodities/new
   def new

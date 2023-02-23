@@ -1,6 +1,6 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
  *
  * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
  * vendor/assets/stylesheets directory can be referenced here using a relative path.
@@ -62,6 +62,11 @@ figure {
 }
 
 .green-button-section a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.back-arrow a {
   text-decoration: none;
   color: #fff;
 }
@@ -234,11 +239,6 @@ body {
 .form-new-commodity div {
   display: flex;
   flex-direction: column;
-  margin-top: 3rem;;
+  margin-top: 3rem;
   justify-content: space-between;
-}
-
-.back-arrow a {
-  text-decoration: none;
-  color: #fff;
 }

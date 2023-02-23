@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @tx %>
+
+<div>
+  <%= link_to "Edit this tx", edit_tx_path(@tx) %> |
+  <%= link_to "Back to txes", txes_path %>
+
+  <%= button_to "Destroy this tx", @tx, method: :delete %>
+</div>

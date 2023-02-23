@@ -71,7 +71,7 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'carrierwave'
 gem 'devise'
 gem 'dotenv-rails'
 gem 'letter_opener'
-gem 'carrierwave'

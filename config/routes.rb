@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :txes
   resources :commodities
   get 'spash/index'
   devise_for :users
