@@ -152,6 +152,8 @@ body {
   height: 100%;
 }
 
+.new-user-section,
+.new-commodity-section,
 .commodity-section {
   display: flex;
   flex-direction: column;
@@ -177,6 +179,21 @@ body {
   margin-top: 0;
 }
 
+.commodity-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  margin: 10px;
+  padding: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.commodity-details {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+}
+
 .green-button-section {
   display: flex;
   justify-content: center;
@@ -192,4 +209,36 @@ body {
   background-color: transparent;
   border: 1px solid #fff;
   padding: 10px 120px;
+}
+
+.new-user-form,
+.new-commodity-form {
+  align-items: center;
+}
+
+.new-user-form div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-new-commodity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-new-commodity div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;;
+  justify-content: space-between;
+}
+
+.back-arrow a {
+  text-decoration: none;
+  color: #fff;
 }

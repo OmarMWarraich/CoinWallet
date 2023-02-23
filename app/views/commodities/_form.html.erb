@@ -1,3 +1,4 @@
+<section class='form-new-commodity'>
 <%= form_with(model: commodity) do |form| %>
   <% if commodity.errors.any? %>
     <div style="color: red">
@@ -17,16 +18,16 @@
   </div>
 
   <div>
-    <%= form.label :icon, style: "display: block" %>
-    <%= form.text_area :icon %>
+  <%= form.label :icon, style: "display: block" %>
+  <%= form.file_field :icon %>
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div>
     <%= form.submit %>
   </div>
 <% end %>
+</section>

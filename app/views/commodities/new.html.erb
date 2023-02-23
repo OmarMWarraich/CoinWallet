@@ -1,9 +1,21 @@
-<h1>New commodity</h1>
-
-<%= render "form", commodity: @commodity %>
-
-<br>
-
-<div>
-  <%= link_to "Back to commodities", commodities_path %>
-</div>
+<section class='new-commodity-section'>  
+  <div class='header'>
+    <div class='back-arrow'>
+      <%= link_to '←', commodities_path %>
+    </div>
+    <div>
+       <h1>New Category</h1>
+    </div>
+    <div class='search-section'>
+      <%= image_tag ("search2.png"), class:'search-image' %>
+    </div>
+  </div>
+  <div class="commodities new-commodity-form">
+    <div>
+      <%= render "form", commodity: @commodity %>
+    </div>
+    <div class='green-button-section'>
+      <%= link_to "Scan", class:'new-category-button' %>
+    </div>
+  </div>
+  </section>

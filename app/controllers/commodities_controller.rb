@@ -1,13 +1,18 @@
 class CommoditiesController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_commodity, only: %i[show edit update destroy]
 
   # GET /commodities or /commodities.json
   def index
-    @commodities = Commodity.all
+    @commodities = Commodity.all.where(user_id: current_user.id).order('created_at DESC')
+    commodity = Commodity.find_by(id: params[:id])
   end
 
   # GET /commodities/1 or /commodities/1.json
-  def show; end
+  def show; 
+    @commodity = Commodity.find_by(id: params[:id])
+    @commodities = Commodity.all
+end
 
   # GET /commodities/new
   def new
@@ -23,7 +28,7 @@ class CommoditiesController < ApplicationController
 
     respond_to do |format|
       if @commodity.save
-        format.html { redirect_to commodity_url(@commodity), notice: 'Commodity was successfully created.' }
+        format.html { redirect_to commodities_url, notice: 'Commodity was successfully created.' }
         format.json { render :show, status: :created, location: @commodity }
       else
         format.html { render :new, status: :unprocessable_entity }
