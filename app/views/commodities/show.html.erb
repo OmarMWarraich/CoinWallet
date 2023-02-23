@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @commodity %>
+
+<div>
+  <%= link_to "Edit this commodity", edit_commodity_path(@commodity) %> |
+  <%= link_to "Back to commodities", commodities_path %>
+
+  <%= button_to "Destroy this commodity", @commodity, method: :delete %>
+</div>

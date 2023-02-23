@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CashScan</title>
+    <title>CoinWallet</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,8 +11,7 @@
     <%= javascript_include_tag "main", async: true, "data-turbo-track": "reload" %>
   </head>
 
-  <body>
-    
+  <body id="main">    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

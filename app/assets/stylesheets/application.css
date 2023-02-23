@@ -14,6 +14,24 @@
  *= require_self
  */
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure {
+  margin: 0;
+}
+
 
 /* The side navigation menu */
 .sidenav {
@@ -43,6 +61,11 @@
   text-decoration: none;
 }
 
+.green-button-section a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .sidenav a:hover {
   color: #818181;
 }
@@ -66,6 +89,10 @@
   background-color: #3778c2;
   color: #fff;
   padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .nav {
@@ -73,9 +100,9 @@
   padding: 0;
 }
 
-body,
-html {
+body {
   height: 100%;
+  min-height: 100vh;
   margin: 0;
   padding: 0;
 }
@@ -113,4 +140,56 @@ html {
 
 .splash-header {
   display: none;
+}
+
+.search-section {
+  width: 10%;
+  height: 50%;
+}
+
+.search-image {
+  width: 100%;
+  height: 100%;
+}
+
+.commodity-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.commodities {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.commodities:first-child {
+  margin-top: 0;
+}
+
+.commodities:last-child {
+  margin-top: 0;
+}
+
+.green-button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #5fb523;
+  width: 100%;
+  padding: 20px;
+}
+
+.new-category-button {
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #fff;
+  padding: 10px 120px;
 }

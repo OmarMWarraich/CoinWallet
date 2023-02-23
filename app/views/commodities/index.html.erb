@@ -1,0 +1,39 @@
+<section class='commodity-section'>
+<p style="color: green"><%= notice %></p>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Account Settings</a>
+    <a href="#">Merchant Finder</a>
+    <a href="#">Claim promo</a>
+    <a href="#">Share promo</a>
+  </div>
+  <div class='header'>
+    <div onclick="openNav()">
+      <%= image_tag ("hamburger.png") %>
+    </div>
+    <div>
+      <h1>Categories</h1>     
+    </div>
+    <div class='search-section'>
+      <%= image_tag ("search2.png"), class:'search-image' %>
+    </div>
+  </div>
+  
+  <div class="commodities">
+    <div class="commodity">
+      <% if @commodities.length == 0 %>
+         <p>There are no categories</p>
+         <% else %>
+      <% @commodities.each do |commodity| %>
+        <%= link_to commodity_path do%>
+          <p><%= commodity.name %></p>
+          <p><%= commodity.icon %></p>
+        <% end %>
+        <% end %>
+        <% end %>
+    </div>
+    <div class='green-button-section'>
+      <%= link_to "New Category", new_commodity_path, class:'new-category-button' %>
+    </div>
+  </div>
+  </section>
