@@ -32,7 +32,6 @@ figure {
   margin: 0;
 }
 
-
 /* The side navigation menu */
 .sidenav {
   height: 100%; /* 100% Full-height */
@@ -157,6 +156,8 @@ body {
   height: 100%;
 }
 
+.new-transaction-section,
+.transaction-section,
 .new-user-section,
 .new-commodity-section,
 .commodity-section {
@@ -168,6 +169,7 @@ body {
   width: 100vw;
 }
 
+.transactions,
 .commodities {
   display: flex;
   flex-direction: column;
@@ -210,12 +212,13 @@ body {
 }
 
 .new-category-button {
-  font-size: 12px;
+  font-size: 11px;
   background-color: transparent;
   border: 1px solid #fff;
   padding: 10px 120px;
 }
 
+.new-transaction-form,
 .new-user-form,
 .new-commodity-form {
   align-items: center;
@@ -229,6 +232,7 @@ body {
   margin-top: 10px;
 }
 
+.form-new-transaction,
 .form-new-commodity {
   display: flex;
   flex-direction: column;
@@ -236,9 +240,15 @@ body {
   align-items: center;
 }
 
+.form-new-transaction div,
 .form-new-commodity div {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
   justify-content: space-between;
+}
+
+.form-new-transaction div {
+  margin-top: 1rem;
+  text-align: center;
 }

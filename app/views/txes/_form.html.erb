@@ -1,3 +1,4 @@
+<section class='form-new-transaction'>
 <%= form_with(model: tx) do |form| %>
   <% if tx.errors.any? %>
     <div style="color: red">
@@ -12,8 +13,7 @@
   <% end %>
 
   <div>
-    <%= form.label :author_id, style: "display: block" %>
-    <%= form.text_field :author_id %>
+    <%= form.hidden_field :author_id, value: current_user.id %>
   </div>
 
   <div>
@@ -27,8 +27,7 @@
   </div>
 
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
   </div>
 
   <div>
@@ -40,3 +39,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</section>

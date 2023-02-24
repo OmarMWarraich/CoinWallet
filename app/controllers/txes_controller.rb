@@ -3,7 +3,7 @@ class TxesController < ApplicationController
 
   # GET /txes or /txes.json
   def index
-    @txes = Tx.all
+    @txes = Tx.all.where(commodity_id: params[:commodity_id]).order('created_at DESC')
   end
 
   # GET /txes/1 or /txes/1.json
