@@ -1,10 +1,38 @@
+<section class='transaction-section'>
 <p style="color: green"><%= notice %></p>
-
-<%= render @commodity %>
-
-<div>
-  <%= link_to "Edit this commodity", edit_commodity_path(@commodity) %> |
-  <%= link_to "Back to commodities", commodities_path %>
-
-  <%= button_to "Destroy this commodity", @commodity, method: :delete %>
-</div>
+  <div class='header'>
+    <div class='back-arrow'>
+      <%= link_to '←', commodities_path %>
+    </div>
+    <div>
+      <h1>Transactions</h1>     
+    </div>
+    <div class='search-section'>
+      <%= image_tag ("search2.png"), class:'search-image' %>
+    </div>
+  </div>  
+  <div class="transactions">
+      <% if @txes.length == 0 %>
+         <p>There are no transactions</p>
+         <% else %>
+         <div class='transaction-cards'>
+         <div style='text-align:center;'><small>Sum: <%= @amount %></div>
+      <% @txes.each do |tx| %>
+          <div class='transaction-card'>
+            <div class='transaction-details'>
+              <div><small>Category: <%= tx.commodity.name %></small></div>
+              <div><small>Created At:<%= tx.created_at.strftime("%d %b %Y") %></small></div>
+              <div><small>Transaction: <%= tx.name %></small></div>
+              <div><small>Amount: <%= tx.amount %></small></div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+        <% end %>
+    <div class='green-button-section'>
+      <% if can? :create, Tx %>
+        <%= link_to "New Transaction", new_tx_path, class:'new-category-button' %>
+      <% end %>
+    </div>
+  </div>
+  </section>

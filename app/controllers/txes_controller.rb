@@ -4,8 +4,6 @@ class TxesController < ApplicationController
   # GET /txes or /txes.json
   def index
     @commodity = Commodity.find_by(id: params[:commodity_id])
-    @txes = Tx.all.where(commodity_id: @commodity)
-    @amount = Tx.all.where(user_id: current_user.id).sum(:amount)
   end
 
   # GET /txes/1 or /txes/1.json
@@ -15,6 +13,7 @@ class TxesController < ApplicationController
   def new
     @tx = Tx.new
     @commodities = Commodity.all.where(user_id: current_user.id)
+    @commodity = Commodity.find_by(id: params[:commodity_id])
   end
 
   # GET /txes/1/edit
@@ -23,10 +22,11 @@ class TxesController < ApplicationController
   # POST /txes or /txes.json
   def create
     @tx = Tx.new(tx_params)
-
+    @commodity = @tx.commodity_id
+    @commodities = Commodity.all.where(user_id: current_user.id)
     respond_to do |format|
       if @tx.save
-        format.html { redirect_to txes_url(@tx), notice: 'Tx was successfully created.' }
+        format.html { redirect_to commodity_url(@commodity), notice: 'Tx was successfully created.' }
         format.json { render :show, status: :created, location: @tx }
       else
         format.html { render :new, status: :unprocessable_entity }

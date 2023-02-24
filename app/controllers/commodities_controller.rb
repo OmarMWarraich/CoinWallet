@@ -11,6 +11,8 @@ class CommoditiesController < ApplicationController
   def show
     @commodity = Commodity.find_by(id: params[:id])
     @commodities = Commodity.all
+    @txes = Tx.all.where(commodity_id: @commodity.id).order('created_at DESC')
+    @amount = @txes.all.where(user_id: current_user.id).sum(:amount)
   end
 
   # GET /commodities/new

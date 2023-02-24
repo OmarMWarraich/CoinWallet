@@ -188,6 +188,7 @@ Example:
 
 > Describe 1 - 3 features you will add to the project.
 
+- [ ] **[Pagination]**
 - [ ] **[OmniAuth and Stripe Integration]**
 - [ ] **[Web3 Integration]**
 - [ ] **[Bar Code Scanner]**
