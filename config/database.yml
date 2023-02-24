@@ -79,5 +79,12 @@ test:
 # for a full overview on how database connection configuration can be specified.
 #
 production:
-  <<: *default
-    url: <%= ENV['DATABASE_URL'] %>
+  
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: coinwallet_production
+  username: coinwallet
+  password: <%= ENV["COINWALLET_DATABASE_PASSWORD"] %>
