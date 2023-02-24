@@ -70,6 +70,11 @@ figure {
   color: #fff;
 }
 
+.commodity-cards a {
+  text-decoration: none;
+  color: #434b54;
+}
+
 .sidenav a:hover {
   color: #818181;
 }
@@ -186,6 +191,7 @@ body {
   margin-top: 0;
 }
 
+.transaction-card,
 .commodity-card {
   display: grid;
   grid-template-columns: 110px 1fr;
@@ -193,6 +199,16 @@ body {
   padding: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   background: rgba(255, 255, 255, 0.2);
+}
+
+.transaction-card {
+  grid-template-columns: auto;
+}
+
+.transaction-details {
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
 }
 
 .commodity-details {

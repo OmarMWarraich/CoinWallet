@@ -19,30 +19,30 @@
     </div>
   </div>
   
-  <div class="commodities">
-    
+  <div class="commodities">    
       <% if @commodities.length == 0 %>
          <p>There are no categories</p>
          <% else %>
          <div class='commodity-cards'>
       <% @commodities.each do |commodity| %>
-        <%= link_to txes_path(commodity.id) do%>
+        <%= link_to txes_path(@tx) do%>
           <div class='commodity-card'>
             <div><%= image_tag(commodity.icon_url, width: 100, height: 100) if commodity.icon.present? %></div>
             <div class='commodity-details'>
-              <div><p><%= commodity.name %></p></div>
-              <div><p><%= commodity.name %></p></div>
-              <div><p><%= commodity.created_at.strftime("%d %b %Y") %></p></div>
+              <div><small>Name: <%= commodity.name %></small></div>
+              <div><small>Count: <%= commodity.txes.count %></small></div>
+              <div><small><%= commodity.created_at.strftime("%d %b %Y") %></small></div>
             </div>
           </div>
         <% end %>
         <% end %>
       </div>
         <% end %>
-    
-    
+  
     <div class='green-button-section'>
-      <%= link_to "New Category", new_commodity_path, class:'new-category-button' %>
+      <% if can? :create, Commodity %>
+        <%= link_to "New Category", new_commodity_path, class:'new-category-button' %>
+      <% end %>
     </div>
   </div>
   </section>

@@ -71,6 +71,7 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'cancancan'
 gem 'carrierwave'
 gem 'devise'
 gem 'dotenv-rails'

@@ -16,20 +16,23 @@
          <p>There are no transactions</p>
          <% else %>
          <div class='transaction-cards'>
+         <div style='text-align:center;'><small>Sum: <%= @amount %></div>
       <% @txes.each do |tx| %>
           <div class='transaction-card'>
-            <div></div>
             <div class='transaction-details'>
-              <div><p><%= tx.name %></p></div>
-              <div><p><%= tx.name %></p></div>
-              <div><p><%= tx.created_at.strftime("%d %b %Y") %></p></div>
+              <div><small>Category: <%= tx.commodity.name %></small></div>
+              <div><small>Created At:<%= tx.created_at.strftime("%d %b %Y") %></small></div>
+              <div><small>Transaction: <%= tx.name %></small></div>
+              <div><small>Amount: <%= tx.amount %></small></div>
             </div>
           </div>
         <% end %>
       </div>
         <% end %>
     <div class='green-button-section'>
-      <%= link_to "New Transaction", new_tx_path, class:'new-category-button' %>
+      <% if can? :create, Tx %>
+        <%= link_to "New Transaction", new_tx_path, class:'new-category-button' %>
+      <% end %>
     </div>
   </div>
   </section>

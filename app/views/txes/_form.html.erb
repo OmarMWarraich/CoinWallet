@@ -32,7 +32,7 @@
 
   <div>
     <%= form.label :commodity_id, style: "display: block" %>
-    <%= form.text_field :commodity_id %>
+    <%= form.select :commodity_id, options_for_select(@commodities.map { |commodity| [commodity.name, commodity.id] }) %>
   </div>
 
   <div>

@@ -216,10 +216,10 @@ If you like this project please give it a ⭐️!.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank the design team for the amazing design.
-- Original design idea by Gregoire Vella on Behance.
+I would like to thank the following.
+-  Gregoire Vella on Behance for the Original Design Idea.
 - Any body who shall read and review my code.
-- Last but not the Least, Student Success Team at Microverse.
+- Student Success Team at Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

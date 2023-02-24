@@ -6,4 +6,10 @@ class User < ApplicationRecord
 
   has_many :commodities, dependent: :destroy
   has_many :txes, dependent: :destroy
+
+  validates :name, presence: true, length: { maximum: 50 }
+
+  def authenticated?
+    !confirmed_at.nil? && !confirmation_token.nil?
+  end
 end
