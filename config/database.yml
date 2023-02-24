@@ -81,6 +81,4 @@ test:
 #
 production:
   <<: *default
-  database: CashScan_production
-  username: CashScan
-  password: <%= ENV["CASHSCAN_DATABASE_PASSWORD"] %>
+    url: <%= ENV['DATABASE_URL'] %>
