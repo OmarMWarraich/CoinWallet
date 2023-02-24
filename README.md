@@ -157,6 +157,10 @@ To run tests, run the following command:
   bin/rails test test/models/
 ```
 
+### Video
+
+[Video Link](https://www.youtube.com/watch?v=xIW9CYveryM)
+
 ### Deployment
 
 You can deploy this project using:
