@@ -1,0 +1,21 @@
+<section class='new-transaction-section'>  
+  <div class='header'>
+    <div class='back-arrow'>
+      <%= link_to '←', commodities_path %>
+    </div>
+    <div>
+      <h1>New Transaction</h1>
+    </div>
+    <div class='search-section'>
+      <%= image_tag ("search2.png"), class:'search-image' %>
+    </div>
+  </div>
+  <div class="transactions new-transaction-form">
+    <div>
+      <%= render "form", tx: @tx %>
+    </div>
+    <div class='green-button-section'>
+      <%= link_to "Scan", class:'new-category-button' %>
+    </div>
+  </div>
+  </section>

@@ -1,0 +1,2 @@
+module SpashHelper
+end
