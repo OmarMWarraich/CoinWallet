@@ -104,6 +104,8 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dockerfile-rails (1.2.1)
+      rails
     dotenv (2.8.1)
     dotenv-rails (2.8.1)
       dotenv (= 2.8.1)
@@ -271,6 +273,7 @@ DEPENDENCIES
   carrierwave
   debug
   devise
+  dockerfile-rails (>= 1.2)
   dotenv-rails
   importmap-rails
   jbuilder

@@ -77,3 +77,5 @@ gem 'carrierwave'
 gem 'devise'
 gem 'dotenv-rails'
 gem 'letter_opener'
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
