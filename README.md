@@ -60,7 +60,7 @@ After you're finished please remove all the comments and instructions!
 # 📖 [Coin Wallet] <a name="about-project"></a>
 
 
-**[Coin Wallet]** is a simple web application that allows users to create a wallet and add coins to it. The application is built using Ruby on Rails and PostgreSQL.
+Coin Wallet is a simple web application that allows users to create a wallet and it is built using Ruby on Rails and PostgreSQL. It is deployed on fly.io and uses devise for authentication and allowing the users to create an account, add commodities and transactions in their accounts.
 
 ## 🛠 Built With <a name="built-with"></a>
 
