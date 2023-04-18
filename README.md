@@ -24,7 +24,6 @@ After you're finished please remove all the comments and instructions!
 
 <div align="center">
 
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>Microverse README Template</b></h3>
@@ -224,7 +223,6 @@ If you like this project please give it a ⭐️!.
 I would like to thank the following.
 -  Gregoire Vella on Behance for the Original Design Idea.
 - Any body who shall read and review my code.
-- Student Success Team at Microverse.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
